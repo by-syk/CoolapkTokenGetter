@@ -1,9 +1,3 @@
-package com.by_syk.coolapktokengetter.util
-
-import android.annotation.SuppressLint
-import android.annotation.TargetApi
-import android.content.ClipData
-import android.content.ClipboardManager
 /*
  * Copyright 2017 By_syk
  *
@@ -20,7 +14,13 @@ import android.content.ClipboardManager
  * limitations under the License.
  */
 
+package com.by_syk.coolapktokengetter.util
+
+import android.annotation.SuppressLint
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
+import java.util.*
 
 /**
  * Created by By_syk on 2017-05-19.
@@ -43,5 +43,17 @@ object ExtraUtil {
                     as android.text.ClipboardManager
             clipboardManager.text = text
         }
+    }
+
+    fun formatTime(timeMillis: Long?): String {
+        var calendar = Calendar.getInstance()
+        if (timeMillis != null) {
+            calendar.timeInMillis = timeMillis
+        }
+
+        return String.format("%1$02d:%2$02d:%3$02d",
+                calendar.get(Calendar.HOUR_OF_DAY),
+                calendar.get(Calendar.MINUTE),
+                calendar.get(Calendar.SECOND))
     }
 }

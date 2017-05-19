@@ -23,4 +23,8 @@
 
     <string name="toast_copied">Copied to clipboard.</string>
 
+    <string name="refresh">Refresh</string>
+    <string name="copy">Copy</string>
+    <string name="create_timestamp">Created at %s.</string>
+
 </resources>

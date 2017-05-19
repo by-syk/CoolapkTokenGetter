@@ -5,6 +5,8 @@ To get `X-App-Token` value for CoolApk API.
 
 The project is written with **Kotlin**.
 
+[screenshot](art/screenshot.png)
+
 
 ### License
 

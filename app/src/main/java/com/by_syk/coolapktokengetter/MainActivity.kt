@@ -35,12 +35,25 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tv.text = AuthUtils.getAS(UUID.randomUUID().toString())
+        refresh()
     }
 
-    fun onTvClick(view: View) {
-        ExtraUtil.copy2Clipboard(this, tv.text as String)
+    fun onClick(view: View) {
+        when (view.id) {
+            R.id.btRefresh -> refresh()
+            R.id.btCopy -> copy()
+        }
+    }
 
-        Toast.makeText(this, R.string.toast_copied, Toast.LENGTH_SHORT).show();
+    private fun refresh() {
+        tvToken.text = AuthUtils.getAS(UUID.randomUUID().toString())
+
+        tvTime.text = getString(R.string.create_timestamp, ExtraUtil.formatTime(null))
+    }
+
+    private fun copy() {
+        ExtraUtil.copy2Clipboard(this, tvToken.text as String)
+
+        Toast.makeText(this, R.string.toast_copied, Toast.LENGTH_SHORT).show()
     }
 }

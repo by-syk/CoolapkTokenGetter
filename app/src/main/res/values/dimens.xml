@@ -27,5 +27,6 @@
     <dimen name="dlg_vertical_padding">8dp</dimen>-->
 
     <dimen name="unit_padding">8dp</dimen>
+    <dimen name="half_unit_padding">4dp</dimen>
 
 </resources>
