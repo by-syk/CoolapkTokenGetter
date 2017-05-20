@@ -26,11 +26,14 @@
         android:layout_height="0dp"
         android:layout_weight="1.0"
         android:gravity="center"
+        android:padding="@dimen/unit_padding"
+        android:background="@drawable/frame"
         android:textColor="@android:color/primary_text_dark"
-        android:paddingEnd="@dimen/activity_horz_margin"
-        android:paddingLeft="@dimen/activity_horz_margin"
-        android:paddingRight="@dimen/activity_horz_margin"
-        android:paddingStart="@dimen/activity_horz_margin" />
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horz_margin"
+        android:layout_marginLeft="@dimen/activity_horz_margin"
+        android:layout_marginRight="@dimen/activity_horz_margin"
+        android:layout_marginStart="@dimen/activity_horz_margin" />
 
     <TextView
         android:id="@+id/tvTime"
@@ -38,12 +41,37 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:textSize="12sp"
+        android:layout_marginTop="@dimen/unit_padding"
         android:textColor="@android:color/tertiary_text_dark"
-        android:paddingEnd="@dimen/activity_horz_margin"
-        android:paddingLeft="@dimen/activity_horz_margin"
-        android:paddingRight="@dimen/activity_horz_margin"
-        android:paddingStart="@dimen/activity_horz_margin"
+        android:layout_marginEnd="@dimen/activity_horz_margin"
+        android:layout_marginRight="@dimen/activity_horz_margin"
         android:layout_gravity="end" />
+
+    <TextView
+        android:text="@string/adb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:layout_marginTop="@dimen/unit_padding"
+        android:layout_marginEnd="@dimen/activity_horz_margin"
+        android:layout_marginLeft="@dimen/activity_horz_margin"
+        android:layout_marginRight="@dimen/activity_horz_margin"
+        android:layout_marginStart="@dimen/activity_horz_margin" />
+
+    <TextView
+        android:text="@string/adb_cmd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame"
+        android:textSize="14sp"
+        android:textColor="@android:color/secondary_text_dark"
+        android:padding="@dimen/unit_padding"
+        android:layout_marginTop="@dimen/unit_padding"
+        android:layout_marginEnd="@dimen/activity_horz_margin"
+        android:layout_marginLeft="@dimen/activity_horz_margin"
+        android:layout_marginRight="@dimen/activity_horz_margin"
+        android:layout_marginStart="@dimen/activity_horz_margin" />
 
     <LinearLayout
         android:layout_width="match_parent"

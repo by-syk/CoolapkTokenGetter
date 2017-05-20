@@ -31,6 +31,12 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".receiver.CoolapkTokenGetReceiver">
+            <intent-filter>
+                <action android:name="adbCoolapkTokenGet" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

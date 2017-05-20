@@ -26,5 +26,7 @@
     <string name="refresh">Refresh</string>
     <string name="copy">Copy</string>
     <string name="create_timestamp">Created at %s.</string>
+    <string name="adb">Via computer:</string>
+    <string name="adb_cmd">adb shell am broadcast -a adbCoolapkTokenGet</string>
 
 </resources>

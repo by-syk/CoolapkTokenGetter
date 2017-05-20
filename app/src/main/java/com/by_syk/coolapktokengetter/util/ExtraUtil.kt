@@ -34,19 +34,40 @@ object ExtraUtil {
         }
 
         if (C.SDK >= 11) {
-            var clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
+            val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
                     as ClipboardManager
-            var clipData = ClipData.newPlainText(null, text)
+            val clipData = ClipData.newPlainText(null, text)
             clipboardManager.primaryClip = clipData
         } else {
-            var clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
+            val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
                     as android.text.ClipboardManager
             clipboardManager.text = text
         }
     }
 
+    @SuppressLint("NewApi")
+    fun getFromClipboard(context: Context?): String? {
+        if (context == null) {
+            return null
+        }
+
+        if (C.SDK >= 11) {
+            val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
+                    as ClipboardManager
+            val clipData = clipboardManager.primaryClip
+            if (clipData.itemCount > 0) {
+                return clipData.getItemAt(0).text.toString()
+            }
+            return null
+        } else {
+            val clipboardManager = context.getSystemService(Context.CLIPBOARD_SERVICE)
+                    as android.text.ClipboardManager
+            return clipboardManager.text.toString()
+        }
+    }
+
     fun formatTime(timeMillis: Long?): String {
-        var calendar = Calendar.getInstance()
+        val calendar = Calendar.getInstance()
         if (timeMillis != null) {
             calendar.timeInMillis = timeMillis
         }

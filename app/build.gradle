@@ -10,8 +10,8 @@ android {
         applicationId "com.by_syk.coolapktokengetter"
         minSdkVersion 8
         targetSdkVersion 25
-        versionCode 17051900
-        versionName "1.0.0.nightly"
+        versionCode 17052000
+        versionName "1.1.0.nightly"
     }
 
     buildTypes {
